@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper{
+  height: 100vh;
+  display: flex;
+}
+
+.chat-side{
+  height: 100%;
+  width: 300px;
+  background-color: #253141;
+  &__header{
+    height: 100px;
+    background-color: #253141;
+    align-items: center;
+    display: flex;
+    &--box{
+      height: 20px;
+      width: 260px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      color: #ffffff;
+      &--right{
+        width: 60px;
+        text-align: right;
+      }
+      &--left{
+        font-size: 16px;
+      }
+    }
+  }
+  &__groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    &--box{
+      height: 91px;
+      color: #ffffff;
+      padding: 20px 20px 40px 20px;
+      &--name{
+        font-size:15px;
+      }
+      &--lastmassege{
+        font-size: 11px;
+        padding-top:5px;
+
+      }
+    }
+  }
+}
+
+.chat-main{
+  height: 100%;
+  width: calc(100vw - 300px);
+  background-color:#ffffff;
+  margin: 0;
+  padding: 0;
+  &__header{
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &--left-box{
+      height: 100px;
+      width: 300px;
+      padding: 35px 0 0 40px;
+      &-name{
+        font-size: 20px;
+        color: #333333;
+      }
+      &-group{
+        font-size: 12px;
+        color: #999999;
+        padding-top: 15px;
+      }
+    }
+    &--right-box{
+      height: 40px;
+      width: 72px;
+      border: 1px solid #38aef0;
+      text-align: center;
+      line-height: 40px;
+      margin: 28px 40px 0 0;
+
+    }
+    
+  }
+
+  &__messages{
+    height: calc(100vh - 190px);
+    background-color:#fafafa;
+    &--box{
+      width: 745px;
+      height: 105px;
+      padding: 35px 40px 46px 40px;
+      &-user{
+        padding-bottom:12px ;
+        color: #333333;
+        font-size: 16px;
+        display: flex;
+        justify-content: start;
+        &-name{
+          color: #333333;
+          font-size: 16px;
+        }
+        &-date{
+          color: 14px;
+          color: #434A54;
+          padding-left: 5px;
+        }
+      }
+      &-massege{
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+    }
+
+  &__form{
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+
+}
+
+.box__btn{
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 13px;
+}
+.edit-btn{
+  text-decoration: none;
+  color: #38aef0;
+  font-size: 16px;
+}
