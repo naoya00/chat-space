@@ -3,26 +3,22 @@
 }
 .wrapper{
   height: 100vh;
-  display: flex;
+  @include flex();
 }
-
 .chat-side{
   height: 100%;
   width: 300px;
-  background-color: #253141;
   &__header{
     height: 100px;
     background-color: #253141;
     align-items: center;
-    display: flex;
+    @include flex();
     &--box{
       height: 20px;
       width: 260px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      color: #ffffff;
+      @include flex-between();
+      color: $main-white;
       &--right{
         width: 60px;
         text-align: right;
@@ -37,7 +33,7 @@
     background-color: #2f3e51;
     &--box{
       height: 91px;
-      color: #ffffff;
+      color: $main-white;
       padding: 20px 20px 40px 20px;
       &--name{
         font-size:15px;
@@ -45,31 +41,27 @@
       &--lastmassege{
         font-size: 11px;
         padding-top:5px;
-
       }
     }
   }
 }
-
 .chat-main{
   height: 100%;
   width: calc(100vw - 300px);
-  background-color:#ffffff;
   margin: 0;
   padding: 0;
   &__header{
     height: 100px;
-    background-color: #ffffff;
+    background-color: $main-white;
     border-bottom: 1px solid #eeeeee;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between();
     &--left-box{
       height: 100px;
       width: 300px;
       padding: 35px 0 0 40px;
       &-name{
         font-size: 20px;
-        color: #333333;
+        color: $main-black;
       }
       &-group{
         font-size: 12px;
@@ -84,31 +76,34 @@
       text-align: center;
       line-height: 40px;
       margin: 28px 40px 0 0;
+      p{
+        height: 40px;
+        width: 72px;
+      }
 
     }
     
   }
-
   &__messages{
     height: calc(100vh - 190px);
     background-color:#fafafa;
     &--box{
-      width: 745px;
+      width: 100%;
       height: 105px;
       padding: 35px 40px 46px 40px;
       &-user{
         padding-bottom:12px ;
-        color: #333333;
+        color: $main-black;
         font-size: 16px;
         display: flex;
         justify-content: start;
         &-name{
-          color: #333333;
+          color: $main-black;
           font-size: 16px;
         }
         &-date{
-          color: 14px;
-          color: #434A54;
+          font-size: 12px;
+          color: #999999;
           padding-left: 5px;
         }
       }
@@ -118,51 +113,39 @@
       }
     }
     }
-
   &__form{
     height: 90px;
     background-color: #d2d2d2;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between();
     align-items: center;
     &--left{
       height: 50px;
-      width: calc(100vw - 495px);
-      margin-left: 40px;
-      background-color: darkgreen;
-      display: flex;
-      justify-content: space-between;
+      width: calc(100vw - 455px);
+      position: relative;
+      @include flex();
       &-text{
-        width: 630px;
-        height: 50px;
-        background-color: crimson;
-        margin: 0;
+        padding: 0 40px 0 10px;
+        width: 100%;
+        margin-left: 40px;
       }
       &-img{
-        height: 50px;
-        width: 50px;
-        position: relative;
-        margin-right: 10px;
-        i{
-          font-size: 22px;
-          position: absolute;
-          right: 0;
-          margin: auto;
-        }
+        position: absolute;
+        right: 10px;
+        font-size: 22px;
+        line-height: 50px;
       }
     }
     &--right{
       width: 100px;
       height: 50px;
-      background-color: blueviolet;
+      background-color:#00BFFF;
       margin-right: 40px;
+      color: $main-white;
     }
   }
-
 }
-
 .box__btn{
-  color: #ffffff;
+  color: $main-white;
   text-decoration: none;
   margin-left: 5px;
   font-size: 13px;
