@@ -17,27 +17,12 @@
           2019/11/20(wed) 17:43:01
       .chat-main__messages--box-massege
         おはよう
-    .chat-main__messages--box
-      .chat-main__messages--box-user
-        .chat-main__messages--box-user-name
-          masa
-        .chat-main__messages--box-user-date
-          2019/11/20(wed) 17:43:01
-      .chat-main__messages--box-massege
-        おはよう
-    .chat-main__messages--box
-      .chat-main__messages--box-user
-        .chat-main__messages--box-user-name
-          masa
-        .chat-main__messages--box-user-date
-          2019/11/20(wed) 17:43:01
-      .chat-main__messages--box-massege
-        おはよう
-  %form.chat-main__form
-    .chat-main__form--left
-      %input.chat-main__form--left-text{placeholder:"type a message", type: "text"}
-      .chat-main__form--left-img
-        %label.input--box__image
-          %i.fa.fa-image
-          %input{type: "file"}
-    %input.chat-main__form--right{type: "submit", value: "Send"}
+  .chat-main__form
+    = form_for [@group, @message] do |f|
+      .chat-main__form--left
+        = f.text_field :content, class: 'chat-main__form--left-text', placeholder: 'type a message'
+        .chat-main__form--left-img
+          = f.label :image, class: 'input--box__image' do
+            %i.fa.fa-image
+            %input{type: "file"}
+      = f.submit 'Send', class: 'chat-main__form--right'
