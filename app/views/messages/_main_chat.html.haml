@@ -9,14 +9,7 @@
       = link_to "#", class: "edit-btn" do
         %p Edit
   .chat-main__messages
-    .chat-main__messages--box
-      .chat-main__messages--box-user
-        .chat-main__messages--box-user-name
-          masa
-        .chat-main__messages--box-user-date
-          2019/11/20(wed) 17:43:01
-      .chat-main__messages--box-massege
-        おはよう
+    = render @message
   .chat-main__form
     = form_for [@group, @message] do |f|
       .chat-main__form--left
