@@ -9,7 +9,7 @@
       = link_to "#", class: "edit-btn" do
         %p Edit
   .chat-main__messages
-    = render @message
+    = render @messages
   .chat-main__form
     = form_for [@group, @message] do |f|
       .chat-main__form--left

@@ -161,3 +161,12 @@ label {
 label input {
   display: none;
 }
+
+#new_message{
+  height: 90px;
+  width: 100%;
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
