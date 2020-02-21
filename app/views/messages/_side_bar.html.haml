@@ -4,17 +4,15 @@
       .chat-side__header--box--left
         = current_user.name
       .chat-side__header--box--right
-        = link_to "#", class: "box__btn" do
+        = link_to new_group_path, class: "box__btn" do
           %i.fas.fa-edit
         = link_to edit_user_path(current_user), class: "box__btn" do
           %i.fas.fa-cog
   .chat-side__groups
-    .chat-side__groups--box
-      .chat-side__groups--box--name techamp
-      .chat-side__groups--box--lastmassege まだメッセージがありません
-    .chat-side__groups--box
-      .chat-side__groups--box--name techamp
-      .chat-side__groups--box--lastmassege まだメッセージがありません
-    .chat-side__groups--box
-      .chat-side__groups--box--name techamp
-      .chat-side__groups--box--lastmassege まだメッセージがありません
+    - current_user.groups.each do |group|
+      .chat-side__groups--box
+        = link_to '#' do
+          .chat-side__groups--box--name
+            = group.name
+          .chat-side__groups--box--lastmassege
+            メッセージはまだありません
