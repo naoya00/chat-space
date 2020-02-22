@@ -62,11 +62,13 @@
       &-name{
         font-size: 20px;
         color: $main-black;
+        width: 650px;
       }
       &-group{
         font-size: 12px;
         color: #999999;
         padding-top: 15px;
+        width: 650px;
       }
     }
     &--right-box{
@@ -160,4 +162,13 @@ label {
 }
 label input {
   display: none;
+}
+
+#new_message{
+  height: 90px;
+  width: 100%;
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
