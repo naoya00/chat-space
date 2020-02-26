@@ -18,6 +18,6 @@
         = f.text_field :content, class: 'chat-main__form--left-text', placeholder: 'type a message'
         .chat-main__form--left-img
           = f.label :image, class: 'input--box__image' do
-            %i.fa.fa-image
-            %input#message_image{type: "file"} 
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'chat-main__form--right'
