@@ -19,5 +19,5 @@
         .chat-main__form--left-img
           = f.label :image, class: 'input--box__image' do
             %i.fa.fa-image
-            %input{type: "file"}
+            %input#message_image{type: "file"} 
       = f.submit 'Send', class: 'chat-main__form--right'
