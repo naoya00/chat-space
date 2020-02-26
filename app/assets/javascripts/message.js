@@ -55,7 +55,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__messages').append(html);
-      $('.chat-main__form--left-text').val("");
+      $('#new_message')[0].reset();
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
       $(".chat-main__form--right").prop('disabled', false);
     })
