@@ -1,0 +1,18 @@
+@media screen and (max-width: 601px){
+  .chat-side{
+    display: none;
+  }
+  .chat-main{
+    width: 100%;
+  }
+
+  .chat-main__header--left-box {
+    width: 70%;
+    &-name{
+      width: 100%;
+    }
+    &-group{
+      width: 100%;
+    }
+}
+}
